@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+nav ul li a{
+    color: #7a7a7a;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+}
+nav ul li{
+    position: relative;
+}
+  
+    nav  ul li:hover:after{
+        background-color: #a51300;
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    -webkit-transition: all 3s;
+    transition: all 3s;
+     }
+
