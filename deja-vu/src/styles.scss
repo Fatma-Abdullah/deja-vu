@@ -8,7 +8,12 @@
     box-sizing: border-box;
 
 }
-
+.navbar{
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
 nav ul li a{
     color: #7a7a7a;
     padding-top: 25px;
@@ -35,6 +40,8 @@ nav ul li{
 
      /////////////////////////////////////services section//////////////////////////////////
      .services-container{
+         margin-top: 0px;
+        background-color: #f3f3f3;
        display: block;
     //    display: flex;
        position: relative;
@@ -645,12 +652,13 @@ nav ul li{
 
 
 
-    ////////////////////////////header///////////////////////////////////////////////////////////
+    //////////////////////////// header///////////////////////////////////////////////////////////
     .header-container{
         background-image: linear-gradient(rgba(3, 0, 0, 0.658),rgba(10, 8, 8, 0.61)),url("assets/images/header-bg-test.jpg");
         background-position: center ;
         // background-color: rgba(20, 18, 18, 0.89);
         background-size: cover;
+        width: 100%;
         height: 93vh;
         display: flex;
         justify-content: center;
@@ -664,140 +672,135 @@ nav ul li{
             & img{
                 width: 20vw;
             }
-            & p{
-                font-variant: small-caps;;
+            & pre{
+                display: block;
+                margin-top: 15vh;
+                color: #c4c4c4;
+
             }
             & .dropping-texts{
+                margin-top: 6px;
+                text-align: center;
+                position: relative;
+                // display:inline-block;
+                & div {
+                    // top: 80%;
+                    left: 35%;
+                    font-size:0px;
+                    opacity:0;
+                    margin-left:-10px;
+                    position:absolute;
+                    font-weight:900; 
+                    text-align: center;  
+                    box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+                  }
+                    & div:nth-child(1) {
+                      animation: roll 5s linear infinite 0s;
+                    }
+                    & div:nth-child(2) {
+                      animation: roll 5s linear infinite 1s;
+                    }
+                    &  div:nth-child(3) {
+                      animation: roll 5s linear infinite 2s;
+                    }
+                    &  div:nth-child(4) {
+                      animation: roll 5s linear infinite 3s;
+                    }
+                    // & div:nth-child(5) {
+                    //     animation: roll 5s linear infinite 4s;
+                    //   }
+                    //   & div:nth-child(6) {
+                    //     animation: roll 5s linear infinite 5s;
+                    //   }
+                    //   &  div:nth-child(7) {
+                    //     animation: roll 5s linear infinite 6s;
+                    //   }
+                    //   &  div:nth-child(8) {
+                    //     animation: roll 5s linear infinite 7s;
+                    //   }
+                    @keyframes roll {
+                        0% {
+                          font-size:0px;
+                          opacity:0;
+                          margin-left:-10px;
+                          margin-top:0px;
+                          transform: rotate(-25deg);
+                        }
+                        3% {
+                          opacity:1;
+                          transform: rotate(0deg);
+                        }
+                        5% {
+                          font-size:inherit;
+                          opacity:1;
+                          margin-left:0px;
+                          margin-top:0px;
+                        }
+                        20% {
+                          font-size:inherit;
+                          opacity:1;
+                          margin-left:0px;
+                          margin-top:0px;
+                          transform: rotate(0deg);
+                        }
+                        27% {
+                          font-size:0px;
+                          opacity:0.5;
+                          margin-left:20px;
+                          margin-top:100px;
+                        }
+                        100% {
+                          font-size:0px;
+                          opacity:0;
+                          margin-left:-30px;
+                          margin-top:0px;
+                          transform: rotate(15deg);
+                        }
+                      }
+                      
+                    //   @keyframes roll2 {
+                    //     0% {
+                    //       font-size:0px;
+                    //       opacity:0;
+                    //       margin-left:-30px;
+                    //       margin-top:0px;
+                    //       transform: rotate(-25deg);
+                    //     }
+                    //     3% {
+                    //       opacity:1;
+                    //       transform: rotate(0deg);
+                    //     }
+                    //     5% {
+                    //       font-size:inherit;
+                    //       opacity:1;
+                    //       margin-left:0px;
+                    //       margin-top:0px;
+                    //     }
+                    //     30% {
+                    //       font-size:inherit;
+                    //       opacity:1;
+                    //       margin-left:0px;
+                    //       margin-top:0px;
+                    //       transform: rotate(0deg);
+                    //     }
+                    //     37% {
+                    //       font-size:1500px;
+                    //       opacity:0;
+                    //       margin-left:-1000px;
+                    //       margin-top:-800px;
+                    //     }
+                    //     100% {
+                    //       font-size:0px;
+                    //       opacity:0;
+                    //       margin-left:-30px;
+                    //       margin-top:0px;
+                    //       transform: rotate(15deg);
+                    //     }
+                    //   }
+                      
+                    
 
             }
-
-// body {
-//   margin:0px;
-//   text-align:center;
-//   padding-top:43vh;
-//   color:#fff;
-//   font-family:'Roboto';
-//   font-size:36px;
-//   font-weight:100;
-
-// }
-
-.dropping-texts {
-//   display: inline-block;
-//   width: 180px;
-//   text-align: left;
-//   height: 36px;
-//   vertical-align: -2px;
-}
-
-.dropping-texts > div {
-  font-size:0px;
-  opacity:0;
-  margin-left:-30px;
-  position:absolute;
-  font-weight:300;   
-  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
-}
-
-.dropping-texts > div:nth-child(1) {
-  animation: roll 5s linear infinite 0s;
-}
-.dropping-texts > div:nth-child(2) {
-  animation: roll 5s linear infinite 1s;
-}
-.dropping-texts > div:nth-child(3) {
-  animation: roll 5s linear infinite 2s;
-}
-.dropping-texts > div:nth-child(4) {
-  animation: roll2 5s linear infinite 3s;
-}
-
-@keyframes roll {
-  0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
-  }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
-  }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-  }
-  20% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  27% {
-    font-size:0px;
-    opacity:0.5;
-    margin-left:20px;
-    margin-top:100px;
-  }
-  100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
-  }
-}
-
-@keyframes roll2 {
-  0% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(-25deg);
-  }
-  3% {
-    opacity:1;
-    transform: rotate(0deg);
-  }
-  5% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-  }
-  30% {
-    font-size:inherit;
-    opacity:1;
-    margin-left:0px;
-    margin-top:0px;
-    transform: rotate(0deg);
-  }
-  37% {
-    font-size:1500px;
-    opacity:0;
-    margin-left:-1000px;
-    margin-top:-800px;
-  }
-  100% {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    margin-top:0px;
-    transform: rotate(15deg);
-  }
-}
-
-
-
-
-
-
-
 
 
 
@@ -810,3 +813,232 @@ nav ul li{
 
         
     }
+////////////////////////end header////////////////////////////////////////////////////////////////\
+.mission-container{
+    background-color: #f3f3f3;
+    min-height: 110vh;
+    max-height: fit-content;
+    margin-bottom: 0px;
+    & .mission{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      
+        & div{
+            margin-top: 9vh;
+            & h4{
+                text-transform: uppercase;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 2.5;
+                font-family: "Futura", Sans-serif;
+                & span{
+                    color: #d2232a;
+                    text-transform: uppercase;
+
+                }
+            }
+        & hr{
+            display: block;
+             width: 50px;
+             background-color:black;
+             height: 0.5px;
+             border-radius: 3px;
+             margin: auto;
+             margin-bottom: 2em;
+             
+         }
+        & p{
+             font-family: "Futura", Sans-serif;
+             
+             font-size: 20px;
+           //   font-weight: 400;
+             line-height: 0.6em;
+             & span{
+               color: #d2232a;
+               text-transform:capitalize;
+               font-weight: bolder;
+               
+             }
+            }   
+
+            }
+          }
+
+          .mission-content{
+                         font-family: "Futura", Sans-serif;
+                         margin-top: 4vh;
+                         font-size: 15px;
+         
+                         & h5{
+                             font-size: 1em;
+                             font-weight: bolder;
+         
+                             text-transform: capitalize;
+                         }
+                            & ul li{
+                             list-style: none;
+                             text-decoration: none;
+                             font-family: "Futura", Sans-serif;
+                             line-height: 2;
+                             color: black;
+         
+                             & i{
+                                color: rgb(187, 43, 43);
+                                margin-right: 8px;
+                             }
+         
+                            }
+                        }
+                    }
+
+      ///////////////////// ////////////////////end mission/////////////////////////////////
+
+      ////////////////footeerr/////////////////////////
+      .footer-container{
+        background-image: linear-gradient(rgba(36, 36, 36, 0.658),rgba(61, 57, 57, 0.61)),url("assets/images/bg-logo1.png");
+        background-position: center ;
+        background-color: rgba(20, 18, 18, 0.89);
+        background-size: cover;
+        height: 55vh;
+                  
+          & .first-foot{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              top: 25px;
+              & div{
+                  margin-top: 60px;
+                & h4{
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    font-weight: 500;
+                    line-height: 2.5em;
+                    font-family: "Futura", Sans-serif;
+                    color:#e2e2e2;
+
+                }
+            & hr{
+                // display: block;
+                 width: 50px;
+                 background-color:#e2e2e2;
+                 height: 0.5px;
+                 border-radius: 3px;
+                 margin: auto;
+                 margin-bottom: 2em;
+                 line-height: 6em;
+                 
+             }
+              & .subsribe-foot{
+                  display: flex;
+                  margin-top: 40px;
+                  & input{
+                    background-color: #d9d9d9;
+                    border-color: #7a7a7a;
+                    border-radius: 0px 0px 0px 0px;
+                    width: 39vw;
+                    height: 7vh;
+                    padding: 6px;
+                
+                  }
+                  & a{
+                       text-decoration: none;
+                       background-color: #bb1b06;
+                       color: #c4c4c4;
+                       text-align: center;
+                       text-transform: uppercase;
+                       font-weight: bold;
+                       padding: 11px;
+                       width: 12vw;
+                       height: 7vh;
+                       display: inline-block;
+                       margin-left:10px ;
+                       transition:  all 0.3s ease-in-out;
+
+                  }
+                  & a:hover{
+                      transform: translateY(-12px);
+                      background-color:white ;
+                      color: hsl(7, 94%, 38%);
+                  }
+              }
+              & .foot-icons{
+                  text-align: center;
+                  & span{
+                      display: inline-block;
+                      margin-top: 10px;
+                      & i{
+                          color: white;
+                          margin-right:3vw ;
+                          font-size: 20px;
+                      }
+                  }
+
+
+              }
+              }
+
+          }
+          & .second-foot{
+            margin-top: 50px;
+            background-color: #282828;
+            min-height: 50vh;
+             .first{
+                font-family: "Futura", Sans-serif;
+                margin-top: 14vh;
+                font-size: 15px;
+
+                & h5{
+                    font-size: 1em;
+                    font-weight: bolder;
+                    color: white;
+
+                    text-transform: capitalize;
+                }
+                   & ul li{
+                    list-style: none;
+                    text-decoration: none;
+                    font-family: "Futura", Sans-serif;
+                    line-height: 2;
+                    color: #9f9f9f;
+                    font-size: 14px;
+                    cursor: pointer;
+
+                    & i{
+                       color: rgb(187, 43, 43);
+                       margin-right: 8px;
+                    }
+
+                   }
+                   & ul li:hover{
+                       color: #a51300;
+                       cursor: pointer;
+
+                   }
+               }
+
+          }
+          & .copyright{
+              width: 100%;
+              height: 10vh;
+              background-color: rgb(27, 27, 27);
+              text-align: center;
+            
+              & p{
+                    // margin-top:25px ;
+                   color: #9f9f9f;
+                   padding-top:25px ;
+                   font-size: 15px;
+                   
+                  & span{
+                      color: #a51300;
+                      
+                  }
+              }
+          }
+      }
+
+      /////////////////////end footer////////////////////////////////
+    
