@@ -107,31 +107,31 @@
                     </div>
                 </div>
                 <div class="col-12  col-md-6">
-                    <form method="get" action="" #f=ngForm (ngSubmit)="SendMsg(f)">
-                        <input class="form-control" type="text" name="Name" placeholder="Your Name" ngModel
-                            #Name=ngModel required>
+                    <form method="get" action="" #f=ngForm (ngSubmit)="SendMsg(f.value)">
+                        <input class="form-control" type="text" name="Name" placeholder="Your Name" ngModel #Name="ngModel"
+                             required>
                         <div class="alert alert-danger" role="alert" *ngIf="Name.invalid && Name.touched">Name is
                             required
                         </div>
 
-                        <input class="form-control" type="email" name="Email" placeholder="Your Email" ngModel
-                            #Email=ngModel required email>
+                        <input class="form-control" type="email" name="Email" placeholder="Your Email" ngModel #Email="ngModel"
+                         required email>
                         <div class="alert alert-danger" role="alert" *ngIf="Email.invalid && Email.touched">Email is
                             required</div>
                         <div class="alert alert-danger" role="alert" *ngIf="Email.errors?.email && Email.touched">Email
                             format is not
                             correct</div>
 
-                        <input class="form-control" type="text" name="Subject" placeholder="Subject" ngModel
-                            #Subject=ngModel required>
+                        <input class="form-control" type="text" name="Subject" placeholder="Subject" ngModel #Subject="ngModel"
+                        required>
                         <div class="alert alert-danger" role="alert" *ngIf="Subject.invalid && Subject.touched">Subject
                             is
                             required
                         </div>
 
-                        <textarea class="form-control" name="Message" placeholder="Message" rows="6" ngModel
-                            #Message=ngModel required></textarea>
-                        <div class="alert alert-danger" role="alert" *ngIf="Message.invalid && Message.touched">Message
+                        <textarea class="form-control" name="msg" placeholder="Message" rows="6" ngModel #msg="ngModel"
+                        required></textarea>
+                        <div class="alert alert-danger" role="alert" *ngIf="msg.invalid && msg.touched">Message
                             is
                             required
                         </div>
@@ -141,5 +141,4 @@
             </div>
         </div>
     </section>
-
 </section>
