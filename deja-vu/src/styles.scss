@@ -13,6 +13,9 @@ body{
   font-family: futur;
   background-color: #f3f3f3;
 }
+p {
+  margin-bottom: 0;
+}
 .navbar{
   position: sticky;
   display: block;
@@ -21,7 +24,7 @@ body{
   z-index: 10;
   background-color: #ffffff;
   box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.1);
-  height: 11vh;
+  // height: 11vh;
   }
 nav {
   
@@ -73,7 +76,9 @@ nav {
   //     margin: auto;
   //    }
 }
-
+.fa-star{
+  width:20vw; color:#a51300; font-size: 50px;
+}
 .service-row{
   display: flex;
   flex-wrap: wrap;
@@ -151,14 +156,17 @@ nav {
   }
 }
 .content-wrapper {
-  height: 35vh;
+  padding: 2em;
   max-width: 21vw;
-  margin-bottom: 2vw;
+  margin-bottom: 12vw;
   position: relative;
 
   & .content-wrapper-back {
-    height: 35vh;
-    width: 21vw;
+    top: 0;
+  left: 0;
+    height: 29vh;
+    padding: 2em;
+    width: 100%;
     position: absolute;
     background-color: #a51300;
     //   z-index: -1;
@@ -180,20 +188,22 @@ nav {
       //   display: block;
     }
     & a {
+      margin: 20px auto;
       display: block;
-      width: 5vw;
       padding: 2px;
       border: 1px solid white;
       border-radius: 1px;
       text-decoration: none;
       color: white;
       text-align: center;
-      margin: auto;
     }
   }
   & .content-wrapper-front {
-    height: 35vh;
-    width: 21vw;
+    top: 0;
+  left: 0;
+    height: 29vh;
+    padding: 2em;
+    width: 100%;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -240,14 +250,17 @@ nav {
   }
 }
 .content-wrapper {
-  height: 35vh;
+  padding: 2em;
   max-width: 100%;
-  margin-bottom: 2vw;
+  margin-bottom: 12vw;
   position: relative;
 
   & .outer-content-wrapper-back {
-    height: 35vh;
-    width: 21vw;
+    top: 0;
+  left: 0;
+    padding: 2em;
+    height: 29vh;
+    width: 100%;
     position: absolute;
     background-color: #a51300;
     //   z-index: -1;
@@ -270,20 +283,22 @@ nav {
       //   display: block;
     }
     & a {
+      margin: 20px auto;
       display: block;
-      width: 5vw;
       padding: 2px;
       border: 1px solid white;
       border-radius: 1px;
       text-decoration: none;
       color: white;
       text-align: center;
-      margin: auto;
     }
   }
   & .outer-content-wrapper-front {
-    height: 35vh;
-    width: 21vw;
+    top: 0;
+  left: 0;
+    height: 29vh;
+    padding: 2em;
+    width: 100%;
     position: absolute;
     z-index: 1;
     display: flex;
@@ -369,22 +384,18 @@ nav {
 
 .vision-container {
   background-image: url("assets/images/vision2.jpg");
-  min-width: 100%;
-  max-width: 110%;
-  min-height: 50vh;
-  max-height: 110%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  background-color: #a51300;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 100%;
-  transition: all 5s ease-in-out;
-  position: relative;
+    display: flex;
+    padding: 5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    /* background-position: top; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    transition: all 10s ease-in-out;
+    position: relative;
   & h4 {
     // margin-bottom: 20px;
     font-size: 30px;
@@ -422,8 +433,10 @@ nav {
 
 /////////////////////////////about us section/////////////////////////////////////////////
 .about-us-container {
+  .row {
+    justify-content: center;
+}
   background-color: #f3f3f3;
-  min-height: 180vh;
   max-height: fit-content;
   & .about-us {
     display: flex;
@@ -489,6 +502,7 @@ nav {
       & .values-cols {
         margin-top: 10vh;
         & .values-img {
+
           background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(10, 8, 8, 0.897)),
             url("assets/images/values.png");
           background-position: center;
@@ -504,10 +518,13 @@ nav {
           // border-radius: 28px 0px 0px 0px;
           & img {
             transition: all 1s ease-in-out;
+              height: 211px;
+              margin-top: 10px;
+              &:hover {
+                transform: skewX(20deg);
+              }
           }
-          & img:hover {
-            transform: skewX(20deg);
-          }
+         
         }
         & .values-description {
           display: flex;
@@ -524,7 +541,6 @@ nav {
         //   box-shadow: 0px 0px 1px #a51300;
         border: 1px solid rgb(255, 255, 255);
         border-radius: 0px 0px 25px 25px;
-        min-height: 40vh;
         max-height: fit-content;
         & .first {
     
@@ -789,7 +805,6 @@ nav {
 
 .mission-container{
   background-color: #f3f3f3;
-  min-height: 110vh;
   max-height: fit-content;
   margin-bottom: 0px;
   & .mission{
@@ -871,19 +886,16 @@ nav {
     ////////////////footeerr/////////////////////////
     .footer-container{
       background-image: linear-gradient(rgba(36, 36, 36, 0.658),rgba(61, 57, 57, 0.61)),url("assets/images/bg-logo1.png");
-      background-position: center ;
       background-color: rgba(20, 18, 18, 0.89);
-      background-size: cover;
-      height: 55vh;
-                
+      background-size: contain;
         & .first-foot{
-            display: flex;
+            // display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            top: 25px;
+            // top: 25px;
             & div{
-                margin-top: 60px;
+              margin-top: 20px;
               & h4{
                   text-transform: uppercase;
                   font-size: 25px;
@@ -907,14 +919,14 @@ nav {
             & .subsribe-foot{
                 display: flex;
                 margin-top: 40px;
+                justify-content: center;
                 & input{
                   background-color: #d9d9d9;
                   border-color: #7a7a7a;
                   border-radius: 0px 0px 0px 0px;
-                  width: 39vw;
-                  height: 7vh;
+                  // height: 7vh;
                   padding: 6px;
-              
+                 width: 39vw;
                 }
                 & a{
                      text-decoration: none;
@@ -924,8 +936,7 @@ nav {
                      text-transform: uppercase;
                      font-weight: bold;
                      padding: 11px;
-                     width: 12vw;
-                     height: 7vh;
+                    //  height: 7vh;
                      display: inline-block;
                      margin-left:10px ;
                      transition:  all 0.3s ease-in-out;
@@ -957,13 +968,12 @@ nav {
         & .second-foot{
           margin-top: 50px;
           background-color: #282828;
-          min-height: 50vh;
           .footer-content{
             margin-left:0;
             padding: 0;
            .first{
               font-family: Futur;
-              margin-top: 14vh;
+              margin: 6vh 0 5vh 0;
               font-size: 15px;
 
               & h5{
@@ -1000,15 +1010,15 @@ nav {
         }
         & .copyright{
             width: 100%;
-            height: 10vh;
             background-color: rgb(27, 27, 27);
             text-align: center;
+            padding: 1em;
           
             & p{
                   // margin-top:25px ;
                  color: #9f9f9f;
-                 padding-top:25px ;
                  font-size: 15px;
+                 margin-bottom: 0;
                  
                 & span{
                     color: #a51300;
@@ -1039,6 +1049,13 @@ nav {
     line-height: 1.8em;
   }
   .contact-container {
+    .row {
+      justify-content: center;
+      .col-sm-12.col-lg-7, .col-lg-6 {
+        flex: 0 0 50%;
+        text-align: center;
+      }
+    }
     .contactHeader {
       overflow: hidden;
       padding: 130px 0px;
@@ -1056,12 +1073,7 @@ nav {
         font-weight: 900;
         font-size: 45px;
       }
-      .row {
-        justify-content: center;
-        .col-sm-12.col-lg-6 {
-          text-align: center;
-        }
-      }
+    
     }
     .GetInTouch {
       margin: 1em 0;
@@ -1143,3 +1155,88 @@ nav {
     }
   }
   ///////////////////////////////////// end contact us////////////////////////////////////////////
+
+  @media screen and (max-width:500px){
+    .contact-container .contactHeader .BoldTitle {
+      font-size: 23px;
+  }
+  .contact-container .contactHeader {
+    padding: 46px 0px;
+  }
+  .contact-container .GetInTouch {
+    font-size: 25px;
+  }
+  .para {
+    font-size: 12px;}
+
+    .contact-container .contactForm {
+      font-size: 25px;
+    }  
+    .information {
+      padding-left: 17px;
+  }
+  .contact-container .information .info {
+    padding-left: 9px;
+    font-size: 10px;
+}
+.contact-container form input, .contact-container form textarea {
+  font-size: 10px;}
+  .footer-container .first-foot div .subsribe-foot input {
+    width: auto;
+    font-size: 10px;
+    height: 5vh;
+  }
+  .footer-container .first-foot div .subsribe-foot a {
+    padding: 3px 8px;
+    font-size: 11px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+.footer-container {
+  background-size: inherit;
+  background-repeat: no-repeat;
+}
+.footer-container .second-foot .footer-content .first {
+  margin-top: 2vh;
+  font-size: 15px;
+}
+.footer-container .copyright p {
+  color: #9f9f9f;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.footer-container .copyright {
+  padding: 15px 0;
+}
+// -------about--------
+.about-us-container h4 {
+  font-size: 38px;}
+  .about-us-container p {
+    font-size: 14px;
+}
+
+  }
+  @media screen and (max-width:800px){
+    // -------services--------
+
+.outer-content-wrapper-front ,.outer-content-wrapper-back, .content-wrapper-front, .content-wrapper-back{
+  height: 14vh !important;
+  top: 0;
+  left: 0; }
+
+  .outer-content-wrapper-front p , .content-wrapper-front p  {
+    font-size: 13px !important;
+    margin-top: 5px !important;
+}
+.fa-star{
+  font-size: 22px;
+}
+ .outer-content-wrapper-back a , .content-wrapper-back a {
+  margin: 11px auto !important;
+}
+ .outer-content-wrapper-back p , .content-wrapper-back p{
+  color: white;
+  font-size: 10px !important;
+}
+  }
