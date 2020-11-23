@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/scss/font-awesome.scss";
 @font-face {
@@ -14,10 +13,20 @@ body{
   font-family: futur;
   background-color: #f3f3f3;
 }
+.navbar{
+  position: sticky;
+  display: block;
+  top:0;
+  right: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.1);
+  height: 11vh;
+  }
 nav {
+  
   img {
     width: 70px;
-    
     }
     ul li {
       position: relative;
@@ -38,10 +47,10 @@ nav {
         padding-bottom: 25px;
         text-transform: uppercase;
         font-size: 14px;
-    font-weight: 500;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
      
   }
@@ -65,7 +74,7 @@ nav {
   //    }
 }
 
-.row {
+.service-row{
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -78,6 +87,8 @@ nav {
   // transform: translateX(3.3em);
   margin: auto;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .column {
@@ -393,7 +404,7 @@ nav {
     margin-bottom: 2em;
   }
   & p {
-    font-family: "Futura", Sans-serif;
+    font-family: futur;
     color: #c4c4c4;
     font-size: 17px;
     font-weight: 400;
@@ -446,7 +457,7 @@ nav {
     margin-bottom: 2em;
   }
   & p {
-    font-family: "Futura", Sans-serif;
+    font-family: futur;
     color: #9f9f9f;
     font-size: 17px;
     //   font-weight: 400;
@@ -471,7 +482,10 @@ nav {
   //////////////////////////////////
 
   & .values {
-    & .container-fluid {
+    & .container {
+      // display: ;
+      // justify-content: center;
+      // align-items: center;
       & .values-cols {
         margin-top: 10vh;
         & .values-img {
@@ -606,269 +620,171 @@ nav {
 }
 //////////////////////////////////////end about us////////////////////////////////////////////
 
-////////////////////////////header///////////////////////////////////////////////////////////
-.header-container {
-  background-image: linear-gradient(rgba(3, 0, 0, 0.658), rgba(10, 8, 8, 0.61)), url("assets/images/header-bg-test.jpg");
-  background-position: center;
-  // background-color: rgba(20, 18, 18, 0.89);
-  background-size: cover;
-  height: 93vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  animation: bg 5s linear infinite;
-  & div {
-    color: #c4c4c4;
-    & img {
-      width: 20vw;
-    }
-    & p {
-      font-variant: small-caps;
-    }
-    & .dropping-texts {
-    }
 
-    // body {
-    //   margin:0px;
-    //   text-align:center;
-    //   padding-top:43vh;
-    //   color:#fff;
-    //   font-family:'Roboto';
-    //   font-size:36px;
-    //   font-weight:100;
 
-    // }
-
-    .dropping-texts {
-      //   display: inline-block;
-      //   width: 180px;
-      //   text-align: left;
-      //   height: 36px;
-      //   vertical-align: -2px;
-    }
-
-    .dropping-texts > div {
-      font-size: 0px;
-      opacity: 0;
-      margin-left: -30px;
-      position: absolute;
-      font-weight: 300;
-      box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
-    }
-
-    .dropping-texts > div:nth-child(1) {
-      animation: roll 5s linear infinite 0s;
-    }
-    .dropping-texts > div:nth-child(2) {
-      animation: roll 5s linear infinite 1s;
-    }
-    .dropping-texts > div:nth-child(3) {
-      animation: roll 5s linear infinite 2s;
-    }
-    .dropping-texts > div:nth-child(4) {
-      animation: roll2 5s linear infinite 3s;
-    }
-
-    @keyframes roll {
-      0% {
-        font-size: 0px;
-        opacity: 0;
-        margin-left: -30px;
-        margin-top: 0px;
-        transform: rotate(-25deg);
-      }
-      3% {
-        opacity: 1;
-        transform: rotate(0deg);
-      }
-      5% {
-        font-size: inherit;
-        opacity: 1;
-        margin-left: 0px;
-        margin-top: 0px;
-      }
-      20% {
-        font-size: inherit;
-        opacity: 1;
-        margin-left: 0px;
-        margin-top: 0px;
-        transform: rotate(0deg);
-      }
-      27% {
-        font-size: 0px;
-        opacity: 0.5;
-        margin-left: 20px;
-        margin-top: 100px;
-      }
-      100% {
-        font-size: 0px;
-        opacity: 0;
-        margin-left: -30px;
-        margin-top: 0px;
-        transform: rotate(15deg);
-      }
-    }
-
-    @keyframes roll2 {
-      0% {
-        font-size: 0px;
-        opacity: 0;
-        margin-left: -30px;
-        margin-top: 0px;
-        transform: rotate(-25deg);
-      }
-      3% {
-        opacity: 1;
-        transform: rotate(0deg);
-      }
-      5% {
-        font-size: inherit;
-        opacity: 1;
-        margin-left: 0px;
-        margin-top: 0px;
-      }
-      30% {
-        font-size: inherit;
-        opacity: 1;
-        margin-left: 0px;
-        margin-top: 0px;
-        transform: rotate(0deg);
-      }
-      37% {
-        font-size: 1500px;
-        opacity: 0;
-        margin-left: -1000px;
-        margin-top: -800px;
-      }
-      100% {
-        font-size: 0px;
-        opacity: 0;
-        margin-left: -30px;
-        margin-top: 0px;
-        transform: rotate(15deg);
-      }
-    }
-  }
-}
-// ----------contact-----------
-.grayTitle {
-  color: #333132;
-  display: flex;
-  justify-content: center;
-}
-.redTitle {
-  color: #d2232a;
-  margin: 0 8px;
-}
-.row {
-  justify-content: center;
-}
-.para {
-  color: #9f9f9f;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8em;
-}
-.contact-container {
-  .contactHeader {
-    padding: 130px 0px;
-    background-color: #000000;
-    background-image: url(https://deja-vu.com/wp-content/uploads/2019/06/office-620822_1920.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .BoldTitle {
-      color: #ffffff;
-      text-transform: uppercase;
-      font-weight: 900;
-      font-size: 45px;
-    }
-    .row {
-      justify-content: center;
-      .col-sm-12.col-lg-6 {
+    //////////////////////////// header///////////////////////////////////////////////////////////
+    .header-container{
+        background-image: linear-gradient(rgba(3, 0, 0, 0.658),rgba(10, 8, 8, 0.61)),url("assets/images/header-bg-test.jpg");
+        background-position: center ;
+        // background-color: rgba(20, 18, 18, 0.89);
+        background-size: cover;
+        width: 100%;
+        height: 93vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-      }
-    }
-  }
-  .GetInTouch {
-    margin: 1em 0;
-    font-size: 45px;
-    font-weight: 900;
-    line-height: 1.8em;
-    .para {
-      text-align: center;
-    }
-  }
-  .map {
-    margin: 1em 0;
-    iframe#gmap_canvas {
-      width: 100%;
-    }
-  }
-  .contactForm {
-    margin: 1em 0;
-    font-size: 35px;
-    font-weight: 500;
-    line-height: 25px;
-    .grayTitle {
-      justify-content: start;
-      margin: 1em 0;
-    }
-    .para {
-      text-align: left;
-    }
-  }
-  .information {
-    .col-12 {
-      padding-left: 0;
-    }
-    .icon {
-      color: #d2232a;
-      font-size: 14px;
-    }
-    .info {
-      padding-left: 12px;
-      color: #333132;
-      font-size: 14px;
-    }
-  }
+        overflow:hidden;
+        animation:bg 5s linear infinite;
+        & div{
+          
+            color: #c4c4c4;
+            & img{
+                width: 20vw;
+            }
+            & pre{
+                display: block;
+                margin-top: 15vh;
+                color: #c4c4c4;
 
-  form {
-    input,
-    textarea {
-      background-color: #ffffff;
-      border-color: #bbbbbb;
-      border-width: 1px 1px 1px 1px;
-      border-radius: 0px 0px 0px 0px;
-      color: #282828;
-      font-size: 15px;
-      min-height: 40px;
-      padding: 5px 14px;
-      margin: 1em 0 0 0;
+            }
+            & .dropping-texts{
+                margin-top: 6px;
+                text-align: center;
+                position: relative;
+                // display:inline-block;
+                & div {
+                    // top: 80%;
+                    left: 35%;
+                    font-size:0px;
+                    opacity:0;
+                    margin-left:-10px;
+                    position:absolute;
+                    font-weight:900; 
+                    text-align: center;  
+                    box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+                  }
+                    & div:nth-child(1) {
+                      animation: roll 5s linear infinite 0s;
+                    }
+                    & div:nth-child(2) {
+                      animation: roll 5s linear infinite 1s;
+                    }
+                    &  div:nth-child(3) {
+                      animation: roll 5s linear infinite 2s;
+                    }
+                    &  div:nth-child(4) {
+                      animation: roll 5s linear infinite 3s;
+                    }
+                    // & div:nth-child(5) {
+                    //     animation: roll 5s linear infinite 4s;
+                    //   }
+                    //   & div:nth-child(6) {
+                    //     animation: roll 5s linear infinite 5s;
+                    //   }
+                    //   &  div:nth-child(7) {
+                    //     animation: roll 5s linear infinite 6s;
+                    //   }
+                    //   &  div:nth-child(8) {
+                    //     animation: roll 5s linear infinite 7s;
+                    //   }
+                    @keyframes roll {
+                        0% {
+                          font-size:0px;
+                          opacity:0;
+                          margin-left:-10px;
+                          margin-top:0px;
+                          transform: rotate(-25deg);
+                        }
+                        3% {
+                          opacity:1;
+                          transform: rotate(0deg);
+                        }
+                        5% {
+                          font-size:inherit;
+                          opacity:1;
+                          margin-left:0px;
+                          margin-top:0px;
+                        }
+                        20% {
+                          font-size:inherit;
+                          opacity:1;
+                          margin-left:0px;
+                          margin-top:0px;
+                          transform: rotate(0deg);
+                        }
+                        27% {
+                          font-size:0px;
+                          opacity:0.5;
+                          margin-left:20px;
+                          margin-top:100px;
+                        }
+                        100% {
+                          font-size:0px;
+                          opacity:0;
+                          margin-left:-30px;
+                          margin-top:0px;
+                          transform: rotate(15deg);
+                        }
+                      }
+                      
+                    //   @keyframes roll2 {
+                    //     0% {
+                    //       font-size:0px;
+                    //       opacity:0;
+                    //       margin-left:-30px;
+                    //       margin-top:0px;
+                    //       transform: rotate(-25deg);
+                    //     }
+                    //     3% {
+                    //       opacity:1;
+                    //       transform: rotate(0deg);
+                    //     }
+                    //     5% {
+                    //       font-size:inherit;
+                    //       opacity:1;
+                    //       margin-left:0px;
+                    //       margin-top:0px;
+                    //     }
+                    //     30% {
+                    //       font-size:inherit;
+                    //       opacity:1;
+                    //       margin-left:0px;
+                    //       margin-top:0px;
+                    //       transform: rotate(0deg);
+                    //     }
+                    //     37% {
+                    //       font-size:1500px;
+                    //       opacity:0;
+                    //       margin-left:-1000px;
+                    //       margin-top:-800px;
+                    //     }
+                    //     100% {
+                    //       font-size:0px;
+                    //       opacity:0;
+                    //       margin-left:-30px;
+                    //       margin-top:0px;
+                    //       transform: rotate(15deg);
+                    //     }
+                    //   }
+                      
+                    
+
+            }
+
+
+
+
+
+
+
+
+        }
+
+        
     }
-    .alert {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 12px;
-      margin: 6px 0 14px 0;
-      border-radius: 0;
-    }
-    button {
-      margin: 1em 0 0 0;
-      background-color: #232323;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: white;
-      min-height: 47px;
-      &:hover {
-        background-color: #d2232a;
-        color: white;
-      }
-    }
-  }
-}
+////////////////////////end header////////////////////////////////////////////////////////////////\
+
 
 
 .mission-container{
@@ -889,7 +805,7 @@ nav {
               font-size: 30px;
               font-weight: 700;
               line-height: 2.5;
-              font-family: "Futura", Sans-serif;
+              font-family: futur;
               & span{
                   color: #d2232a;
                   text-transform: uppercase;
@@ -907,7 +823,7 @@ nav {
            
        }
       & p{
-           font-family: "Futura", Sans-serif;
+           font-family: futur;
            
            font-size: 20px;
          //   font-weight: 400;
@@ -924,7 +840,7 @@ nav {
         }
 
         .mission-content{
-                       font-family: "Futura", Sans-serif;
+                       font-family: futur;
                        margin-top: 4vh;
                        font-size: 15px;
        
@@ -937,7 +853,7 @@ nav {
                           & ul li{
                            list-style: none;
                            text-decoration: none;
-                           font-family: "Futura", Sans-serif;
+                           font-family: futur;
                            line-height: 2;
                            color: black;
        
@@ -973,7 +889,7 @@ nav {
                   font-size: 25px;
                   font-weight: 500;
                   line-height: 2.5em;
-                  font-family: "Futura", Sans-serif;
+                  font-family: futur;
                   color:#e2e2e2;
 
               }
@@ -1042,8 +958,11 @@ nav {
           margin-top: 50px;
           background-color: #282828;
           min-height: 50vh;
+          .footer-content{
+            margin-left:0;
+            padding: 0;
            .first{
-              font-family: "Futura", Sans-serif;
+              font-family: Futur;
               margin-top: 14vh;
               font-size: 15px;
 
@@ -1054,10 +973,11 @@ nav {
 
                   text-transform: capitalize;
               }
+              
                  & ul li{
                   list-style: none;
                   text-decoration: none;
-                  font-family: "Futura", Sans-serif;
+                  font-family: futur;
                   line-height: 2;
                   color: #9f9f9f;
                   font-size: 14px;
@@ -1075,6 +995,7 @@ nav {
 
                  }
              }
+            }
 
         }
         & .copyright{
@@ -1098,3 +1019,127 @@ nav {
     }
 
     /////////////////////end footer////////////////////////////////
+    // /////////////////////////////contact/////////////////////////////////////////////////////////////
+.grayTitle {
+    color: #333132;
+    display: flex;
+    justify-content: center;
+  }
+  .redTitle {
+    color: #d2232a;
+    margin: 0 8px;
+  }
+  .contact-row {
+    justify-content: center;
+  }
+  .para {
+    color: #9f9f9f;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8em;
+  }
+  .contact-container {
+    .contactHeader {
+      overflow: hidden;
+      padding: 130px 0px;
+      background-color: #000000;
+      background-image: linear-gradient(rgba(27, 27, 27, 0.534), rgba(27, 24, 24, 0.781)),
+      url(https://deja-vu.com/wp-content/uploads/2019/06/office-620822_1920.jpg);
+       background-position-x: center;
+       background-position-y: top;
+       background-repeat: no-repeat;
+       background-size: cover;
+       width: 100%;
+      .BoldTitle {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 45px;
+      }
+      .row {
+        justify-content: center;
+        .col-sm-12.col-lg-6 {
+          text-align: center;
+        }
+      }
+    }
+    .GetInTouch {
+      margin: 1em 0;
+      font-size: 45px;
+      font-weight: 900;
+      line-height: 1.8em;
+      .para {
+        text-align: center;
+      }
+    }
+    .map {
+      margin: 1em 0;
+      width: 100%;
+      overflow: hidden;
+      iframe#gmap_canvas {
+        width: 100%;
+      }
+    }
+    .contactForm {
+      margin: 1em 0;
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 25px;
+      .grayTitle {
+        justify-content: start;
+        margin: 1em 0;
+      }
+      .para {
+        text-align: left;
+      }
+    }
+    .information {
+      .col-12 {
+        padding-left: 0;
+      }
+      .icon {
+        color: #d2232a;
+        font-size: 14px;
+      }
+      .info {
+        padding-left: 12px;
+        color: #333132;
+        font-size: 14px;
+      }
+    }
+  
+    form {
+      input,
+      textarea {
+        background-color: #ffffff;
+        border-color: #bbbbbb;
+        border-width: 1px 1px 1px 1px;
+        border-radius: 0px 0px 0px 0px;
+        color: #282828;
+        font-size: 15px;
+        min-height: 40px;
+        padding: 5px 14px;
+        margin: 1em 0 0 0;
+      }
+      .alert {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 12px;
+        margin: 6px 0 14px 0;
+        border-radius: 0;
+      }
+      button {
+        margin: 1em 0 0 0;
+        background-color:#0a0a0a;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: white;
+        min-height: 47px;
+        &:hover {
+          background-color:#a51300;
+          color: white;
+        }
+      }
+    }
+  }
+  ///////////////////////////////////// end contact us////////////////////////////////////////////
