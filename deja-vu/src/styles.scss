@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/scss/font-awesome.scss";
 @font-face {
@@ -14,10 +13,20 @@ body{
   font-family: futur;
   background-color: #f3f3f3;
 }
+.navbar{
+  position: sticky;
+  display: block;
+  top:0;
+  right: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.1);
+  height: 11vh;
+  }
 nav {
+  
   img {
     width: 70px;
-    
     }
     ul li {
       position: relative;
@@ -38,10 +47,10 @@ nav {
         padding-bottom: 25px;
         text-transform: uppercase;
         font-size: 14px;
-    font-weight: 500;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
+        font-weight: 500;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
      
   }
@@ -78,6 +87,8 @@ nav {
   // transform: translateX(3.3em);
   margin: auto;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .column {
@@ -393,7 +404,7 @@ nav {
     margin-bottom: 2em;
   }
   & p {
-    font-family: "Futura", Sans-serif;
+    font-family: futur;
     color: #c4c4c4;
     font-size: 17px;
     font-weight: 400;
@@ -446,7 +457,7 @@ nav {
     margin-bottom: 2em;
   }
   & p {
-    font-family: "Futura", Sans-serif;
+    font-family: futur;
     color: #9f9f9f;
     font-size: 17px;
     //   font-weight: 400;
@@ -471,7 +482,10 @@ nav {
   //////////////////////////////////
 
   & .values {
-    & .container-fluid {
+    & .container {
+      // display: ;
+      // justify-content: center;
+      // align-items: center;
       & .values-cols {
         margin-top: 10vh;
         & .values-img {
@@ -791,7 +805,7 @@ nav {
               font-size: 30px;
               font-weight: 700;
               line-height: 2.5;
-              font-family: "Futura", Sans-serif;
+              font-family: futur;
               & span{
                   color: #d2232a;
                   text-transform: uppercase;
@@ -809,7 +823,7 @@ nav {
            
        }
       & p{
-           font-family: "Futura", Sans-serif;
+           font-family: futur;
            
            font-size: 20px;
          //   font-weight: 400;
@@ -826,7 +840,7 @@ nav {
         }
 
         .mission-content{
-                       font-family: "Futura", Sans-serif;
+                       font-family: futur;
                        margin-top: 4vh;
                        font-size: 15px;
        
@@ -839,7 +853,7 @@ nav {
                           & ul li{
                            list-style: none;
                            text-decoration: none;
-                           font-family: "Futura", Sans-serif;
+                           font-family: futur;
                            line-height: 2;
                            color: black;
        
@@ -875,7 +889,7 @@ nav {
                   font-size: 25px;
                   font-weight: 500;
                   line-height: 2.5em;
-                  font-family: "Futura", Sans-serif;
+                  font-family: futur;
                   color:#e2e2e2;
 
               }
@@ -944,8 +958,11 @@ nav {
           margin-top: 50px;
           background-color: #282828;
           min-height: 50vh;
+          .footer-content{
+            margin-left:0;
+            padding: 0;
            .first{
-              font-family: "Futura", Sans-serif;
+              font-family: Futur;
               margin-top: 14vh;
               font-size: 15px;
 
@@ -956,10 +973,11 @@ nav {
 
                   text-transform: capitalize;
               }
+              
                  & ul li{
                   list-style: none;
                   text-decoration: none;
-                  font-family: "Futura", Sans-serif;
+                  font-family: futur;
                   line-height: 2;
                   color: #9f9f9f;
                   font-size: 14px;
@@ -977,6 +995,7 @@ nav {
 
                  }
              }
+            }
 
         }
         & .copyright{
@@ -1000,7 +1019,7 @@ nav {
     }
 
     /////////////////////end footer////////////////////////////////
-    // contact/////////////////////////////////////////////////////////////
+    // /////////////////////////////contact/////////////////////////////////////////////////////////////
 .grayTitle {
     color: #333132;
     display: flex;
@@ -1010,7 +1029,7 @@ nav {
     color: #d2232a;
     margin: 0 8px;
   }
-  .row {
+  .contact-row {
     justify-content: center;
   }
   .para {
@@ -1021,12 +1040,16 @@ nav {
   }
   .contact-container {
     .contactHeader {
+      overflow: hidden;
       padding: 130px 0px;
       background-color: #000000;
-      background-image: url(https://deja-vu.com/wp-content/uploads/2019/06/office-620822_1920.jpg);
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: linear-gradient(rgba(27, 27, 27, 0.534), rgba(27, 24, 24, 0.781)),
+      url(https://deja-vu.com/wp-content/uploads/2019/06/office-620822_1920.jpg);
+       background-position-x: center;
+       background-position-y: top;
+       background-repeat: no-repeat;
+       background-size: cover;
+       width: 100%;
       .BoldTitle {
         color: #ffffff;
         text-transform: uppercase;
@@ -1051,6 +1074,8 @@ nav {
     }
     .map {
       margin: 1em 0;
+      width: 100%;
+      overflow: hidden;
       iframe#gmap_canvas {
         width: 100%;
       }
@@ -1105,16 +1130,16 @@ nav {
       }
       button {
         margin: 1em 0 0 0;
-        background-color: #232323;
+        background-color:#0a0a0a;
         text-transform: uppercase;
         letter-spacing: 1px;
         color: white;
         min-height: 47px;
         &:hover {
-          background-color: #d2232a;
+          background-color:#a51300;
           color: white;
         }
       }
     }
   }
-  
+  ///////////////////////////////////// end contact us////////////////////////////////////////////

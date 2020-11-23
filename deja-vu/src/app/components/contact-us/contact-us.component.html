@@ -1,16 +1,16 @@
-<section class="contact-container">
+<div class="contact-container">
 
-    <section class="contactHeader">
+    <div class="contactHeader">
         <!-- <div class="backgroundOverlay"></div> -->
-        <div class="row">
+        <div class="row  contact-row">
             <div class="col-sm-12 col-lg-6">
                 <p class="BoldTitle">Contact US</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="GetInTouch">
-        <div class="row">
+    <div class="GetInTouch">
+        <div class="row  contact-row">
             <div class="col-12">
                 <p class="grayTitle">Get
                     <span class="redTitle"> In </span>
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row  contact-row">
             <div class="col-12 col-md-6">
                 <p class="para">
                     We are happy to answer any question you have, we would love to hear from you,
@@ -28,10 +28,10 @@
         </div>
 
 
-    </section>
+    </div>
 
-    <section class="map">
-        <div class="row">
+    <div class="map">
+        <div class="row  contact-row">
             <div class="col-12">
                 <div class="mapouter">
                     <div class="gmap_canvas"><iframe height="500" id="gmap_canvas"
@@ -54,11 +54,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="contactForm">
+    <div class="contactForm">
         <div class="container">
-            <div class="row">
+            <div class="row  contact-row">
                 <div class="col-12 col-md-6">
                     <p class="grayTitle">Contact
                         <span class="redTitle"> Details </span>
@@ -69,7 +69,7 @@
                         Get in touch with us, we are all ears.
                     </p>
                     <div class="information">
-                        <div class="row">
+                        <div class="row  contact-row">
                             <div class="col-12">
                                 <span class="icon">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -78,7 +78,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row  contact-row">
                             <div class="col-12">
                                 <span class="icon">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -87,7 +87,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row  contact-row">
                             <div class="col-12">
                                 <span class="icon">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -96,7 +96,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row  contact-row">
                             <div class="col-12">
                                 <span class="icon">
                                     <i class="fa fa-envelope-open" aria-hidden="true"></i>
@@ -129,7 +129,7 @@
                             required
                         </div>
 
-                        <textarea class="form-control" name="Message" placeholder="Message" rows="6" ngModel
+                        <textarea class="form-control" name="Message" placeholder="Message" row  contact-rows="6" ngModel
                             #Message=ngModel required></textarea>
                         <div class="alert alert-danger" role="alert" *ngIf="Message.invalid && Message.touched">Message
                             is
@@ -140,6 +140,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-</section>
+</div>
