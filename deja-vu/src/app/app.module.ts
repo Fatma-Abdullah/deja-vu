@@ -13,8 +13,12 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HttpClientModule } from '@angular/common/http';
  
 import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './components/login/login.component';
+import { AlertComponent } from './components/alert/alert.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +31,11 @@ import { ToastrModule } from 'ngx-toastr';
     NavbarComponent,
     ContactUsComponent,
     HomeComponent,
+    LoginComponent,
+    AlertComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

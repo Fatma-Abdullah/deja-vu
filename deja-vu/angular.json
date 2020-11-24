@@ -70,7 +70,9 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "deja-vu:build:production"
+              "browserTarget": "deja-vu:build:production",
+              "proxyConfig": "src/proxy.conf.json"
+
             }
           }
         },

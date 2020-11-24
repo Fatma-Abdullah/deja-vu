@@ -1,0 +1,38 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="assets//images/LOGO.png" style="width:100px; padding: 30px;" id="icon" alt="User Icon" />
+      </div>  
+      <!-- Login Form -->
+      <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+        <div class="form-group">
+        <input type="text" formControlName="username" id="login" class="fadeIn second" name="login" placeholder="login"
+        [ngClass]="{'is-invalid': submitted  }" >
+        <div *ngIf="submitted " class="invalid-feedback">
+            <!-- <div *ngIf="f.username.errors.req">Username is required</div> -->
+        </div>
+        </div>
+        <div class="form-group">
+        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"
+        formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted  }">
+        <div *ngIf="submitted " class="invalid-feedback">
+            <!-- <div *ngIf="">Password is required</div> -->
+        </div>
+        </div>
+        <div class="form-group">
+        <input  type="submit" class="fadeIn fourth">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        </div>
+        
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
